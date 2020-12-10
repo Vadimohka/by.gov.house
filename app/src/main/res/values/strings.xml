@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Мой депутат</string>
+    <string name="title_home">Сенаторы</string>
+    <string name="title_dashboard">Депутаты</string>
+    <string name="title_notifications">Поиск депутата</string>
+    <string name="search_sovet">Поиск сенатора</string>
+    <string name="search_deputat">Поиск депутата</string>
+</resources>

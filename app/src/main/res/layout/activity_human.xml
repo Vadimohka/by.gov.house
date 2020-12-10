@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white"
+    tools:context="house.gov.house.Activities.HumanActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <!--<Button
+            android:id="@+id/buttonback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Выбрать другой адрес"
+            android:background="#FFFFFF"
+            android:stateListAnimator="@null"
+            android:listSelector="#00000000"
+            android:textColor="@android:color/black"
+            android:fontFamily="@font/opensans_regular"/>-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_marginStart="10dp"
+                android:id="@+id/photo"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteY="0dp" />
+
+            <TextView
+                android:id="@+id/name1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
+                android:fontFamily="@font/opensans_semibold"
+                android:textColor="@color/text"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.535"
+                app:layout_constraintStart_toEndOf="@+id/photo"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/name2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/opensans_semibold"
+                android:textColor="@color/text"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.535"
+                app:layout_constraintStart_toEndOf="@+id/photo"
+                app:layout_constraintTop_toBottomOf="@+id/name1"
+                tools:ignore="MissingConstraints" />
+
+            <TextView
+                android:id="@+id/name3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/opensans_semibold"
+                android:textColor="@color/text"
+                android:textSize="20sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.535"
+                app:layout_constraintStart_toEndOf="@+id/photo"
+                app:layout_constraintTop_toBottomOf="@+id/name2"
+                tools:ignore="MissingConstraints" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <TextView
+            android:layout_margin="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/okrug"
+            android:fontFamily="@font/opensans_semibold"
+            android:textSize="20sp" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/contacts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/gray"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:layout_marginStart="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Контакты"
+                    android:textColor="@color/text"
+                    android:textSize="22sp"
+                    tools:ignore="MissingConstraints" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/iphone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_contact_phone_24"
+                        android:layout_marginStart="20dp"/>
+
+                    <TextView
+                        android:id="@+id/phone"
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:textSize="20sp"
+                        android:autoLink="phone"
+                        android:textColor="@color/text"
+                        tools:ignore="MissingConstraints"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/iemail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_email_24"
+                        android:layout_marginStart="20dp"/>
+
+                    <TextView
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:textSize="20sp"
+                        android:id="@+id/email"
+                        android:autoLink="email"
+                        android:textColor="@color/text"
+                        tools:ignore="MissingConstraints"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/isite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_chrome"
+                        android:layout_marginStart="20dp"/>
+
+                    <TextView
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/opensans_regular"
+                        android:textSize="20sp"
+                        android:id="@+id/site"
+                        android:autoLink="web"
+                        android:textColor="@color/text"
+                        tools:ignore="MissingConstraints"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/social"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:paddingBottom="10dp"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/gray"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginStart="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Социальные сети"
+                    android:textColor="@color/text"
+                    android:textSize="22sp"
+                    tools:ignore="MissingConstraints" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/vk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vk"
+                        android:background="@color/gray"/>
+
+                    <ImageButton
+                        android:id="@+id/telegram"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/telegram"
+                        android:background="@color/gray"/>
+                    <ImageButton
+                        android:id="@+id/instagram"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/instagram"
+                        android:background="@color/gray" />
+                    <ImageButton
+                        android:id="@+id/facebook"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/facebook"
+                        android:background="@color/gray"/>
+                    <ImageButton
+                        android:id="@+id/twitter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/twitter"
+                        android:background="@color/gray"/>
+                    <ImageButton
+                        android:id="@+id/ok"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ok"
+                        android:background="@color/gray"/>
+                    <ImageButton
+                        android:id="@+id/youtube"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/youtube"
+                        android:background="@color/gray"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/helpers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:cardBackgroundColor="@color/gray"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginStart="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Помощники"
+                    android:textColor="@color/text"
+                    android:textSize="22sp"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:autoLink="phone"
+                    android:id="@+id/helper"
+                    android:layout_marginStart="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textSize="20sp"
+                    android:textColor="@color/text"
+                    tools:ignore="MissingConstraints"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            app:cardBackgroundColor="@color/gray"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginStart="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_semibold"
+                    android:text="Биография"
+                    android:textColor="@color/text"
+                    android:textSize="22sp"
+                    tools:ignore="MissingConstraints" />
+
+                <TextView
+                    android:id="@+id/bio"
+                    android:layout_marginStart="20dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/opensans_regular"
+                    android:textSize="20sp"
+                    android:textColor="@color/text"
+                    tools:ignore="MissingConstraints"/>
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+</ScrollView>

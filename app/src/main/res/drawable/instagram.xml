@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vector xmlns:aapt="http://schemas.android.com/aapt"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:height="40dp" android:viewportHeight="40.0"
+    android:viewportWidth="40.0" android:width="40dp">
+    <path android:fillAlpha="1" android:fillColor="#FFF79A38" android:fillType="nonZero" android:pathData="M 40 20 C 40 31.046875 31.046875 40 20 40 C 8.953125 40 0 31.046875 0 20 C 0 8.953125 8.953125 0 20 0 C 31.046875 0 40 8.953125 40 20 Z M 40 20 " android:strokeWidth="1.0">
+        <aapt:attr name="android:fillColor">
+            <gradient android:endX="22.460663" android:endY="1.5550102"
+                android:startX="1.5460155" android:startY="22.467093" android:type="linear">
+                <item android:color="#FFFFDD55" android:offset="0"/>
+                <item android:color="#FFFF543E" android:offset="0.5"/>
+                <item android:color="#FFC837AB" android:offset="1"/>
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <path android:fillAlpha="1" android:fillColor="#FFFFFFFF"
+        android:fillType="nonZero"
+        android:pathData="M 26.582031 12 L 14.417969 12 C 13.046875 12 12 13.046875 12 14.417969 L 12 26.582031 C 12 27.953125 13.046875 29 14.417969 29 L 26.582031 29 C 27.953125 29 29 27.953125 29 26.582031 L 29 14.417969 C 29 13.046875 27.953125 12 26.582031 12 Z M 20.5 25.601562 C 23.3125 25.601562 25.601562 23.375 25.601562 20.695312 C 25.601562 20.238281 25.535156 19.714844 25.402344 19.324219 L 26.84375 19.324219 L 26.84375 26.253906 C 26.84375 26.582031 26.582031 26.90625 26.1875 26.90625 L 14.8125 26.90625 C 14.484375 26.90625 14.15625 26.644531 14.15625 26.253906 L 14.15625 19.257812 L 15.660156 19.257812 C 15.53125 19.714844 15.464844 20.171875 15.464844 20.628906 C 15.398438 23.375 17.6875 25.601562 20.5 25.601562 Z M 20.5 23.636719 C 18.667969 23.636719 17.230469 22.199219 17.230469 20.433594 C 17.230469 18.667969 18.667969 17.230469 20.5 17.230469 C 22.332031 17.230469 23.769531 18.667969 23.769531 20.433594 C 23.769531 22.265625 22.332031 23.636719 20.5 23.636719 Z M 26.777344 16.640625 C 26.777344 17.035156 26.449219 17.363281 26.058594 17.363281 L 24.226562 17.363281 C 23.835938 17.363281 23.507812 17.035156 23.507812 16.640625 L 23.507812 14.875 C 23.507812 14.484375 23.835938 14.15625 24.226562 14.15625 L 26.058594 14.15625 C 26.449219 14.15625 26.777344 14.484375 26.777344 14.875 Z M 26.777344 16.640625"
+        android:strokeWidth="1.0"
+        tools:ignore="VectorPath" />
+</vector>

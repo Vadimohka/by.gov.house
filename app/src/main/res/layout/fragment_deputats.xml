@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_border"
+        android:padding="5dp"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/ImgaeSearch"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_search_24"
+            android:layout_alignParentStart="true"/>
+
+        <EditText
+            android:id="@+id/search_deputat"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:ellipsize="start"
+            android:background="@null"
+            android:layout_toEndOf="@id/ImgaeSearch"
+            android:layout_toStartOf="@id/clear"
+            android:hint="@string/search_deputat"
+            android:singleLine="true"
+            android:inputType="text"
+            android:imeOptions="actionSearch" />
+
+        <ImageButton
+            android:id="@+id/clear"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_clear_24"
+            android:layout_alignParentEnd="true"
+            android:background="@null"/>
+
+    </RelativeLayout>
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridview_deputats"
+        android:cacheColorHint="@android:color/darker_gray"
+        android:numColumns="2"
+        android:stateListAnimator="@null"
+        android:listSelector="#00000000"
+        android:background="@android:color/white"
+        android:paddingBottom="14dp">
+    </GridView>
+
+</LinearLayout>
