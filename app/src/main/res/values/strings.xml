@@ -1,8 +1,8 @@
 <resources>
-    <string name="app_name">Мой депутат</string>
-    <string name="title_home">Сенаторы</string>
-    <string name="title_dashboard">Депутаты</string>
-    <string name="title_notifications">Поиск депутата</string>
-    <string name="search_sovet">Поиск сенатора</string>
+    <string name="app_name">Парламентарии Беларуси</string>
+    <string name="title_home">Совет республики</string>
+    <string name="title_dashboard">Депутаты VII созыва</string>
+    <string name="title_notifications">Поиск</string>
+    <string name="search_sovet">Поиск члена совета</string>
     <string name="search_deputat">Поиск депутата</string>
 </resources>

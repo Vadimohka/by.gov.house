@@ -4,7 +4,8 @@
     package="by.gov.house">
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -14,7 +15,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="AllowBackup">
-        <activity android:name="by.gov.house.Activities.SplashActivity"
+        <activity android:name=".Activities.SovietFindPage2"
+            android:screenOrientation="portrait"
+            android:theme="@style/SearchTheme"/>
+        <activity android:name=".Activities.SovietFindPage"
+            android:screenOrientation="portrait"
+            android:theme="@style/SearchTheme"/>
+        <activity
+            android:name=".Activities.SplashActivity"
             android:noHistory="true"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -24,7 +32,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="by.gov.house.Activities.MainActivity"
+            android:name=".Activities.MainActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -33,24 +41,30 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name="by.gov.house.Activities.HumanActivity"
-            android:theme="@style/SearchTheme"
-            android:screenOrientation="portrait"/>
-        <activity android:name="by.gov.house.Activities.RegionActivity"
-            android:theme="@style/SearchTheme"
-            android:screenOrientation="portrait"/>
-        <activity android:name="by.gov.house.Activities.DistrictActivity"
-            android:theme="@style/SearchTheme"
-            android:screenOrientation="portrait"/>
-        <activity android:name="by.gov.house.Activities.CityActivity"
-            android:theme="@style/SearchTheme"
-            android:screenOrientation="portrait"/>
-        <activity android:name="by.gov.house.Activities.StreetActivity"
-            android:theme="@style/SearchTheme"
-            android:screenOrientation="portrait"/>
-        <activity android:name="by.gov.house.Activities.HouseActivity"
-            android:theme="@style/SearchTheme"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".Activities.HumanActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SearchTheme" />
+        <activity
+            android:name=".Activities.RegionActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SearchTheme" />
+        <activity
+            android:name=".Activities.DistrictActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SearchTheme" />
+        <activity
+            android:name=".Activities.CityActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SearchTheme" />
+        <activity
+            android:name=".Activities.StreetActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SearchTheme" />
+        <activity
+            android:name=".Activities.HouseActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SearchTheme" />
     </application>
 
 </manifest>

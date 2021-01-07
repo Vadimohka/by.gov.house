@@ -35,22 +35,20 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        Runnable runnable = new Runnable() {
-            public void run() {
-                try {
-                    InputStream f = getAssets().open("NewJson.json");
-                    int size = f.available();
-                    byte[] buffer = new byte[size];
-                    f.read(buffer);
-                    f.close();
-                    String JsonString = new String(buffer, StandardCharsets.UTF_8);
-                    Gson gson = new Gson();
-                    regionList = gson.fromJson(JsonString, RegionList.class);
-                    json = true;
-                }catch (Exception e)
-                {
-                    e.printStackTrace();
-                }
+        Runnable runnable = () -> {
+            try {
+                InputStream f = getAssets().open("NewJson.json");
+                int size = f.available();
+                byte[] buffer = new byte[size];
+                f.read(buffer);
+                f.close();
+                String JsonString = new String(buffer, StandardCharsets.UTF_8);
+                Gson gson = new Gson();
+                regionList = gson.fromJson(JsonString, RegionList.class);
+                json = true;
+            }catch (Exception e)
+            {
+                e.printStackTrace();
             }
         };
         Thread thread = new Thread(runnable);

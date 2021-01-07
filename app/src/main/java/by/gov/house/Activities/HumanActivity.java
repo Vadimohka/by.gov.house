@@ -22,7 +22,7 @@ import static by.gov.house.Activities.SplashActivity.republicsDictionary;
 
 public class HumanActivity extends AppCompatActivity {
 
-    int check, StreetId, CityId, DistrictId, AreaId;
+    int check, StreetId, CityId, DistrictId, AreaId, id;
     Information information;
     TextView name1, name2, name3, okrug, phone, email, site, bio, helper;
     ImageButton vk, facebook, instagram, twitter, ok, youtube, telegram;
@@ -40,7 +40,7 @@ public class HumanActivity extends AppCompatActivity {
 
         Bundle arguments = getIntent().getExtras();
         check = arguments.getInt("Check");
-
+        id = arguments.getInt("Position");
         AreaId = arguments.getInt("AreaId");
         DistrictId = arguments.getInt("DistrictId");
         CityId = arguments.getInt("CityId");
@@ -146,60 +146,39 @@ public class HumanActivity extends AppCompatActivity {
                 telegram.setVisibility(View.GONE);
         }
 
-        vk.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://" + information.vk));
-                startActivity(intent);
-            }
+        vk.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://" + information.vk));
+            startActivity(intent);
         });
 
-        telegram.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://" + information.telegram));
-                startActivity(intent);
-            }
+        telegram.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://" + information.telegram));
+            startActivity(intent);
         });
 
-        instagram.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://" + information.instagram));
-                startActivity(intent);
-            }
+        instagram.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://" + information.instagram));
+            startActivity(intent);
         });
 
-        facebook.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://" + information.facebook));
-                startActivity(intent);
-            }
+        facebook.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://" + information.facebook));
+            startActivity(intent);
         });
 
-        twitter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://" + information.twitter));
-                startActivity(intent);
-            }
+        twitter.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://" + information.twitter));
+            startActivity(intent);
         });
 
-        ok.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://" + information.ok));
-                startActivity(intent);
-            }
+        ok.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://" + information.ok));
+            startActivity(intent);
         });
 
-        youtube.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://" + information.youtube));
-                startActivity(intent);
-            }
+        youtube.setOnClickListener(v -> {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://" + information.youtube));
+            startActivity(intent);
         });
 
     }
@@ -207,7 +186,8 @@ public class HumanActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
-            if (check == 1){
+            if (check == 1)
+            {
                 Intent intent = new Intent (this, CityActivity.class);
                 intent.putExtra("DistrictId", DistrictId);
                 intent.putExtra("AreaId", AreaId);
@@ -220,6 +200,12 @@ public class HumanActivity extends AppCompatActivity {
                 intent.putExtra("CityId", CityId);
                 intent.putExtra("DistrictId", DistrictId);
                 intent.putExtra("AreaId", AreaId);
+                startActivity(intent);
+            }
+            else if(check == 3)
+            {
+                Intent intent = new Intent(this, SovietFindPage2.class);
+                intent.putExtra("id", id);
                 startActivity(intent);
             }
             else

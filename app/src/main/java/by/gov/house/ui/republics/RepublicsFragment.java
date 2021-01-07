@@ -34,15 +34,12 @@ public class RepublicsFragment extends Fragment {
         adapter = new HumanAdapter(root.getContext(), SplashActivity.republicsNameList);
         GList.setAdapter(adapter);
 
-        GList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(root.getContext(), HumanActivity.class);
-                intent.putExtra("id", adapter.getItem(position).id );
-                intent.putExtra("bool", false);
-                startActivity(intent);
-                getActivity().finish();
-            }
+        GList.setOnItemClickListener((parent, view, position, id) -> {
+            Intent intent = new Intent(root.getContext(), HumanActivity.class);
+            intent.putExtra("id", adapter.getItem(position).id );
+            intent.putExtra("bool", false);
+            startActivity(intent);
+            getActivity().finish();
         });
 
         editText = root.findViewById(R.id.search_republic);
@@ -61,11 +58,7 @@ public class RepublicsFragment extends Fragment {
         });
 
         clear = root.findViewById(R.id.clear);
-        clear.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                editText.setText("");
-            }
-        });
+        clear.setOnClickListener(v -> editText.setText(""));
 
         return root;
     }

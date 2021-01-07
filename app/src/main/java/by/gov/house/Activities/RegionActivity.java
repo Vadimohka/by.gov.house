@@ -31,26 +31,21 @@ public class RegionActivity extends AppCompatActivity {
         final ArrayAdapter<String> adapterDistrict = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, areaList);
         lv.setAdapter(adapterDistrict);
 
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-            @Override
-            public void onItemClick(AdapterView<?> parent, View v, int position, long id)
-            {
+        lv.setOnItemClickListener((parent, v, position, id) -> {
 
-                if( adapterDistrict.getItem(position).equals("Минск"))
-                {
-                    toStreet.putExtra("DistrictId", 0);
-                    toStreet.putExtra("CityId", 0);
-                    toStreet.putExtra("AreaId", position);
-                    startActivity(toStreet);
-                    finish();
-                }
-                else
-                {
-                    intent.putExtra("AreaId", position);
-                    startActivity(intent);
-                    finish();
-                }
+            if( adapterDistrict.getItem(position).equals("Минск"))
+            {
+                toStreet.putExtra("DistrictId", 0);
+                toStreet.putExtra("CityId", 0);
+                toStreet.putExtra("AreaId", position);
+                startActivity(toStreet);
             }
+            else
+            {
+                intent.putExtra("AreaId", position);
+                startActivity(intent);
+            }
+            finish();
         });
     }
 

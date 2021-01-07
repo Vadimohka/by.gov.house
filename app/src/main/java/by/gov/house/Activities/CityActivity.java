@@ -44,31 +44,28 @@ public class CityActivity extends AppCompatActivity {
         final Intent intent = new Intent(this, StreetActivity.class);
         final Intent toHuman = new Intent(this, HumanActivity.class);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-                City value = adapter.getItem(position);
-                for (int i = 0; i < SplashActivity.regionList.regionList.get(AreaId).districtList.get(DistrictId).cityList.size(); i++) {
-                    assert value != null;
-                    if( (value.cityName + value.categoryName + value.cityCategory).equals(SplashActivity.regionList.regionList.get(AreaId).districtList.get(DistrictId).cityList.get(i).cityName
-                            + SplashActivity.regionList.regionList.get(AreaId).districtList.get(DistrictId).cityList.get(i).categoryName
-                            + SplashActivity.regionList.regionList.get(AreaId).districtList.get(DistrictId).cityList.get(i).cityCategory) ) {
-                        if (!(SplashActivity.regionList.regionList.get(AreaId).districtList.get(DistrictId).cityList.get(i).deputatId == null)) {
-                            toHuman.putExtra("bool", true);
-                            toHuman.putExtra("id", SplashActivity.regionList.regionList.get(AreaId).districtList.get(DistrictId).cityList.get(i).deputatId);
-                            toHuman.putExtra("Check", 1);
-                            toHuman.putExtra("DistrictId", DistrictId);
-                            toHuman.putExtra("AreaId", AreaId);
-                            startActivity(toHuman);
-                        }
-                        else {
-                            intent.putExtra("CityId", i);
-                            intent.putExtra("DistrictId", DistrictId);
-                            intent.putExtra("AreaId", AreaId);
-                            startActivity(intent);
-                        }
-                        finish();
+        listView.setOnItemClickListener((parent, v, position, id) -> {
+            City value = adapter.getItem(position);
+            for (int i = 0; i < SplashActivity.regionList.regionList.get(AreaId).districtList.get(DistrictId).cityList.size(); i++) {
+                assert value != null;
+                if( (value.cityName + value.categoryName + value.cityCategory).equals(SplashActivity.regionList.regionList.get(AreaId).districtList.get(DistrictId).cityList.get(i).cityName
+                        + SplashActivity.regionList.regionList.get(AreaId).districtList.get(DistrictId).cityList.get(i).categoryName
+                        + SplashActivity.regionList.regionList.get(AreaId).districtList.get(DistrictId).cityList.get(i).cityCategory) ) {
+                    if (!(SplashActivity.regionList.regionList.get(AreaId).districtList.get(DistrictId).cityList.get(i).deputatId == null)) {
+                        toHuman.putExtra("bool", true);
+                        toHuman.putExtra("id", SplashActivity.regionList.regionList.get(AreaId).districtList.get(DistrictId).cityList.get(i).deputatId);
+                        toHuman.putExtra("Check", 1);
+                        toHuman.putExtra("DistrictId", DistrictId);
+                        toHuman.putExtra("AreaId", AreaId);
+                        startActivity(toHuman);
                     }
+                    else {
+                        intent.putExtra("CityId", i);
+                        intent.putExtra("DistrictId", DistrictId);
+                        intent.putExtra("AreaId", AreaId);
+                        startActivity(intent);
+                    }
+                    finish();
                 }
             }
         });
