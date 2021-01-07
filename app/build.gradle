@@ -10,8 +10,8 @@ android {
         applicationId "by.gov.house"
         minSdkVersion 21
         targetSdkVersion 30
-        versionCode 11
-        versionName "0.99"
+        versionCode 14
+        versionName "1.01"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
