@@ -3,6 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="by.gov.house">
 
+    <supports-screens
+        android:smallScreens="false"
+        android:xlargeScreens="false"
+        android:normalScreens="true"
+        android:largeScreens="true" />
+
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
