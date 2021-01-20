@@ -42,7 +42,7 @@ public class SovietFindPage extends AppCompatActivity {
         area.add("Могилёвская");
         area.add("Минская");
         area.add("Минск");
-        area.add("Назначены президентом Республики Белараусь");
+        area.add("Назначены президентом Республики Беларусь");
     }
 
     @Override

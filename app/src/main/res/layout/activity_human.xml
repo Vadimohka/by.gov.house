@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@android:color/white"
-    tools:context="house.gov.house.Activities.HumanActivity">
+    tools:context="by.gov.house.Activities.HumanActivity">
 
 
     <LinearLayout
@@ -13,17 +13,6 @@
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:orientation="vertical">
-
-        <!--<Button
-            android:id="@+id/buttonback"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Выбрать другой адрес"
-            android:background="#FFFFFF"
-            android:stateListAnimator="@null"
-            android:listSelector="#00000000"
-            android:textColor="@android:color/black"
-            android:fontFamily="@font/opensans_regular"/>-->
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -240,38 +229,44 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/vk"
-                        android:background="@color/gray"/>
+                        android:background="@color/gray"
+                        android:layout_marginEnd="8dp"/>
 
                     <ImageButton
                         android:id="@+id/telegram"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/telegram"
-                        android:background="@color/gray"/>
+                        android:background="@color/gray"
+                        android:layout_marginEnd="8dp"/>
                     <ImageButton
                         android:id="@+id/instagram"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/instagram"
-                        android:background="@color/gray" />
+                        android:background="@color/gray"
+                        android:layout_marginEnd="8dp"/>
                     <ImageButton
                         android:id="@+id/facebook"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/facebook"
-                        android:background="@color/gray"/>
+                        android:background="@color/gray"
+                        android:layout_marginEnd="8dp"/>
                     <ImageButton
                         android:id="@+id/twitter"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/twitter"
-                        android:background="@color/gray"/>
+                        android:background="@color/gray"
+                        android:layout_marginEnd="8dp"/>
                     <ImageButton
                         android:id="@+id/ok"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:src="@drawable/ok"
-                        android:background="@color/gray"/>
+                        android:background="@color/gray"
+                        android:layout_marginEnd="8dp"/>
                     <ImageButton
                         android:id="@+id/youtube"
                         android:layout_width="wrap_content"

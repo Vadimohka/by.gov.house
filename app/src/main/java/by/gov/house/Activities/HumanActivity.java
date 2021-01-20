@@ -35,8 +35,9 @@ public class HumanActivity extends AppCompatActivity {
         setContentView(R.layout.activity_human);
 
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setHomeButtonEnabled(true);
+        assert actionBar != null;
         actionBar.setDisplayHomeAsUpEnabled(true);
+        actionBar.setHomeAsUpIndicator(R.drawable.ic_baseline_home_24);
 
         Bundle arguments = getIntent().getExtras();
         check = arguments.getInt("Check");
@@ -186,34 +187,9 @@ public class HumanActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId() == android.R.id.home) {
-            if (check == 1)
-            {
-                Intent intent = new Intent (this, CityActivity.class);
-                intent.putExtra("DistrictId", DistrictId);
-                intent.putExtra("AreaId", AreaId);
-                startActivity(intent);
-            }
-            else if (check == 2)
-            {
-                Intent intent = new Intent (this, HouseActivity.class);
-                intent.putExtra("StreetId", StreetId);
-                intent.putExtra("CityId", CityId);
-                intent.putExtra("DistrictId", DistrictId);
-                intent.putExtra("AreaId", AreaId);
-                startActivity(intent);
-            }
-            else if(check == 3)
-            {
-                Intent intent = new Intent(this, SovietFindPage2.class);
-                intent.putExtra("id", id);
-                startActivity(intent);
-            }
-            else
-            {
-                Intent intent = new Intent (this, MainActivity.class);
-                startActivity(intent);
-            }
-            this.finish();
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            finish();
             return true;
         }
         return super.onOptionsItemSelected(item);
@@ -221,8 +197,33 @@ public class HumanActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-        finish();
+        if (check == 1)
+        {
+            Intent intent = new Intent (this, CityActivity.class);
+            intent.putExtra("DistrictId", DistrictId);
+            intent.putExtra("AreaId", AreaId);
+            startActivity(intent);
+        }
+        else if (check == 2)
+        {
+            Intent intent = new Intent (this, HouseActivity.class);
+            intent.putExtra("StreetId", StreetId);
+            intent.putExtra("CityId", CityId);
+            intent.putExtra("DistrictId", DistrictId);
+            intent.putExtra("AreaId", AreaId);
+            startActivity(intent);
+        }
+        else if(check == 3)
+        {
+            Intent intent = new Intent(this, SovietFindPage2.class);
+            intent.putExtra("id", id);
+            startActivity(intent);
+        }
+        else
+        {
+            Intent intent = new Intent (this, MainActivity.class);
+            startActivity(intent);
+        }
+        this.finish();
     }
 }

@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:background="#FFFFFF"
-    tools:context="house.gov.house.Activities.SplashActivity">
+    tools:context="by.gov.house.Activities.SplashActivity">
 
     <ImageView
         android:layout_width="wrap_content"

@@ -24,12 +24,7 @@ public class StreetAdapter extends ArrayAdapter<Street> implements Filterable {
         super(context, android.R.layout.simple_list_item_2, arrayList);
         this.arrayList = arrayList;
 
-        Collections.sort(this.arrayList, new Comparator<Street>() {
-            @Override
-            public int compare(Street lhs, Street rhs) {
-                return lhs.streetName.compareTo(rhs.streetName);
-            }
-        });
+        Collections.sort(this.arrayList, (lhs, rhs) -> lhs.streetName.compareTo(rhs.streetName));
     }
 
     @Override
