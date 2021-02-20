@@ -69,11 +69,11 @@ public class HumanActivity extends AppCompatActivity {
         Iweb = findViewById(R.id.isite);
         if(arguments.getBoolean("bool")) {
             information = deputatsDictionary.get(arguments.getString("id"));
-            setTitle("Депутат VII созыва");
+            setTitle(R.string.title_dashboard);
         }
         else {
             information = republicsDictionary.get(arguments.getString("id"));
-            setTitle("Совет Республики");
+            setTitle(R.string.title_home);
         }
         photo.setImageResource(getResources().getIdentifier("drawable/"+information.image, null, getPackageName()));
         okrug.setText(information.okrug);
