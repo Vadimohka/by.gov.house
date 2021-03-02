@@ -218,7 +218,7 @@
                     android:textSize="22sp"
                     tools:ignore="MissingConstraints" />
 
-                <LinearLayout
+                <TableRow
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
@@ -272,16 +272,16 @@
                         android:src="@drawable/ok"
                         android:background="@color/gray"
                         android:layout_marginEnd="8dp"/>
+                </TableRow>
 
-                    <ImageButton
-                        android:id="@+id/youtube"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/youtube"
-                        android:background="@color/gray"/>
-
-
-                </LinearLayout>
+                <ImageButton
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="16dp"
+                    android:id="@+id/youtube"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/youtube"
+                    android:background="@color/gray"/>
 
             </LinearLayout>
 

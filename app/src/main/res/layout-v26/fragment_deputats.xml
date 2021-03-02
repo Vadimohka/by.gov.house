@@ -3,8 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@android:color/white"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@android:color/white">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,43 +16,42 @@
         <ImageView
             android:id="@+id/ImgaeSearch"
             android:layout_width="40dp"
-            android:layout_height="32dp"
+            android:layout_height="30dp"
             android:src="@drawable/ic_baseline_search_24"
             android:layout_alignParentStart="true"/>
 
         <EditText
-            android:id="@+id/search_republic"
+            android:id="@+id/search_deputat"
             android:layout_width="match_parent"
-            android:layout_height="32dp"
+            android:layout_height="30dp"
             android:ellipsize="start"
             android:background="@null"
             android:layout_toEndOf="@id/ImgaeSearch"
             android:layout_toStartOf="@id/clear"
-            android:hint="@string/search_sovet"
+            android:hint="@string/search_deputat"
             android:singleLine="true"
             android:inputType="text"
             android:imeOptions="actionSearch"
             android:importantForAutofill="no"
-            app:autoSizeTextType="uniform"
-            app:autoSizeMinTextSize="2sp"
-            app:autoSizeMaxTextSize="100sp"
-            app:autoSizeStepGranularity="2sp"/>
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="2sp"
+            android:autoSizeMaxTextSize="100sp"
+            android:autoSizeStepGranularity="2sp"/>
 
         <ImageButton
             android:id="@+id/clear"
             android:layout_width="40dp"
-            android:layout_height="32dp"
+            android:layout_height="30dp"
             android:src="@drawable/ic_baseline_clear_24"
             android:layout_alignParentEnd="true"
             android:background="@null"/>
 
     </RelativeLayout>
 
-
     <GridView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/gridview_republics"
+        android:id="@+id/gridview_deputats"
         android:cacheColorHint="@android:color/darker_gray"
         android:numColumns="2"
         android:stateListAnimator="@null"

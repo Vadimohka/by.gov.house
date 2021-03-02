@@ -33,10 +33,10 @@
             android:inputType="text"
             android:imeOptions="actionSearch"
             android:importantForAutofill="no"
-            app:autoSizeTextType="uniform"
-            app:autoSizeMinTextSize="2sp"
-            app:autoSizeMaxTextSize="100sp"
-            app:autoSizeStepGranularity="2sp"/>
+            android:autoSizeTextType="uniform"
+            android:autoSizeMinTextSize="2sp"
+            android:autoSizeMaxTextSize="100sp"
+            android:autoSizeStepGranularity="2sp"/>
 
         <ImageButton
             android:id="@+id/clear"
