@@ -315,7 +315,7 @@
                     tools:ignore="MissingConstraints" />
 
                 <TextView
-                    android:autoLink="phone"
+                    android:autoLink="email"
                     android:id="@+id/helper"
                     android:layout_marginTop="8dp"
                     android:layout_marginStart="16dp"
